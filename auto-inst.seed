@@ -93,6 +93,10 @@ d-i pkgsel/update-policy select none
 d-i	debian-installer/quiet	boolean false
 d-i	debian-installer/splash	boolean false
 
+# PoC: copy files from CDROM to target
+d-i preseed/late_command string cp -r /cdrom/post-install /target/; \
+        in-target sudo -u ubuntu mkdir /home/ubuntu/preseed
+
 # Avoid that last message about the install being complete.
 # This will just finish and reboot
 d-i finish-install/reboot_in_progress note
