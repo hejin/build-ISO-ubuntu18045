@@ -36,12 +36,13 @@ fi
 
 # copy files
 echo 'copy files ... '
-CMD=diff
-#CMD=cp
-#CMD_OPTS=' -f '
+#CMD=diff
+CMD=cp
+CMD_OPTS=' -f '
 $CMD $CMD_OPTS build.sh 		 $CDROM_PATH/build.sh
-$CMD $CMD_OPTS auto-inst.seed  $CDROM_PATH/ubuntuiso/preseed/auto-inst.seed
+$CMD $CMD_OPTS auto-inst.seed    $CDROM_PATH/ubuntuiso/preseed/auto-inst.seed
 $CMD $CMD_OPTS grub.cfg 		 $CDROM_PATH/ubuntuiso/boot/grub/grub.cfg
-$CMD $CMD_OPTS txt.cfg         $CDROM_PATH/ubuntuiso/isolinux/txt.cfg
+$CMD $CMD_OPTS txt.cfg           $CDROM_PATH/ubuntuiso/isolinux/txt.cfg
 $CMD $CMD_OPTS isolinux.cfg 	 $CDROM_PATH/ubuntuiso/isolinux/isolinux.cfg
+$CMD -rf       post-install      $CDROM_PATH/
 echo 'done.'
