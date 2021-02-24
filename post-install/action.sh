@@ -18,3 +18,5 @@ chmod +x $POST_INSTALL_DIR/*.sh
 #
 ##enable service
 systemctl enable sample_service
+
+systemctl enable lighttpd
