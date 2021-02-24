@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_DIR=/home/geeko5/build-ISOes
+WORK_DIR=$PWD
 
 mkisofs -D -r -V "Attendless_Ubuntu" \
 	-cache-inodes -J -l -b isolinux/isolinux.bin \

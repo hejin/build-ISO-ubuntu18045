@@ -44,5 +44,5 @@ $CMD $CMD_OPTS auto-inst.seed    $CDROM_PATH/ubuntuiso/preseed/auto-inst.seed
 $CMD $CMD_OPTS grub.cfg 		 $CDROM_PATH/ubuntuiso/boot/grub/grub.cfg
 $CMD $CMD_OPTS txt.cfg           $CDROM_PATH/ubuntuiso/isolinux/txt.cfg
 $CMD $CMD_OPTS isolinux.cfg 	 $CDROM_PATH/ubuntuiso/isolinux/isolinux.cfg
-$CMD -rf       post-install      $CDROM_PATH/
+$CMD -rf       post-install      $CDROM_PATH/ubuntuiso/
 echo 'done.'

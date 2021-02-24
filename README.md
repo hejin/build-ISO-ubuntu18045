@@ -13,6 +13,7 @@ build a customized ubuntu 18.04.5 server ISO with cubic wizard or mkisofs.
 ## 2. build
 
 * mount the ISO file with loop device, create a new working directory under your HOME, and copy all the files from the ISO directory to the working directory (WORKDIR in short)
+  * NOTE: please use the options '-rT' to copy CDROM content to the working directory
 * run the prep.sh scripts of current project, with the parameter of the absolute path of WORKDIR
 * enter the WORKDIR, run 'sh build.sh' with sudo
 * a new ISO file named autoinstall.iso will be in WORKDIR
