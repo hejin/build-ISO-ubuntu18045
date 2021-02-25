@@ -1,4 +1,7 @@
 
+2021-02-25 23:20:00
+ * replaced lighttpd with cockpit for quick integration
+
 2021-02-24 20:44:00
  * fully installation tested with the scripts
  * added lighttpd

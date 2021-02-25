@@ -1,0 +1,18 @@
+# Helper service unit file to initialize cockpit service
+# startup configurations with systemd.
+
+# By o5@softx
+# Licensed under GPL V2
+#
+
+[Unit]
+Description=Cockpit initialization helper shell script
+After=network-online.target sshd.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/cockpit_helper.sh
+
+[Install]
+WantedBy=multi-user.target
