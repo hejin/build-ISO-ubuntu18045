@@ -94,7 +94,7 @@ d-i	debian-installer/quiet	boolean false
 d-i	debian-installer/splash	boolean false
 
 # PoC: copy files from CDROM to target
-d-i preseed/late_command string apt-install policykit-1 cockpit; cp -r /cdrom/post-install /target/; \
+d-i preseed/late_command string apt-install policykit-1 cockpit unzip; cp -r /cdrom/post-install /target/; \
         in-target /bin/sh /post-install/action.sh 
 	
 
